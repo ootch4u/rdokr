@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ0V1EPRRY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PJ0V1EPRRY');
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Red Dead Redemption 2 Online Event Schedule test</title>
+    <meta name="description" content="Timetable of RDR2 Online free-roam/role events, customised to your local time zone" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      if (!window.location.search.includes('disable-ads')) {
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5334550093857056",
+          enable_page_level_ads: true
+        });
+      }
+    </script>
+  </head>
+  <body class="dark">
+    <main class="wrapper">
+      <h1>Red Dead Online 유량모드이벤트 스케쥴</h1>
+      <p>다음 <strong>유랑모드 이벤트</strong>는 <b id="next-fr-event-name"></b>
+         (<b id="next-fr-event-time"></b>) 입니다. 시간은 <span id="next-fr-event-eta"></span> 남았습니다.</p>
+      <p>다음 <strong>직업유랑모드 이벤트</strong>는 <b id="next-role-event-name"></b>
+         (<b id="next-role-event-time"></b>) 입니다. 시간은 <span id="next-role-event-eta"></span> 남았습니다.</p>
+      <p>모든 시간은 기기의 로케일 설정에 따라 현지시간대로 표시됩니다.<span id="locale"></span>,
+        잘못 나열된 이벤트가 보이면 해당 이벤트 옆에 있는 "수정 사항 제출" 링크를 클릭하세요.</p>
+      <button id="theme" class="theme-button" aria-label="Change theme">
+        <span>테마 변경</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 19.8a30.2 30.2 0 1 0 0 60.5 30.2 30.2 0 0 0 0-60.5zM23.8 50A26.2 26.2 0 0 1 48 23.9v52.2A26.2 26.2 0 0 1 23.8 50z"/></svg>
+      </button>
+      <!--
+      <p>Find this useful? <a href="https://www.patreon.com/bePatron?u=24592842" class="become-patron-button">Become a patron</a> <a href="https://www.patreon.com/posts/ive-decided-to-38643559">I'll be matching and donating all funds received!</a></p>
+      <section id="news" class="news">
+        <header>
+          <h2>News</h2>
+          <span>(<a id="toggle-news" href="#" role="button">hide</a>)</span>
+        </header>
+        <ul>
+          <li><time datetime="2023-04-05">5th April 2023:</time> Over the last 3 years, <a href="https://www.reddit.com/r/RedDeadOnline/comments/12c5dgg/rdo_event_schedule_users_have_now_raised_298785/">Event Schedule users have raised £2,987.85 (US$3,733) for the Against Malaria Foundation</a>, via Adsense & Patreon</li>
+          <li><time datetime="2021-07-12">12th July 2021:</time> I've updated the schedule to fetch data from the <a href="https://rdo.gg/api">RDO.GG API</a>, so it should hopefully stay up to date from now on!</li>
+          <li><time datetime="2021-02-22">22nd February 2021:</time> I've updated the role event schedule again. If you can read a <a href="https://docs.google.com/spreadsheets/d/1jUDH4W6WyBY7ux5apKt6nNpuLysVhCE69WCUdXDLNq0/edit?usp=sharing">Google Sheets doc</a> and would like to help keep this app updated promptly, please get in touch!</li>
+          <li><time datetime="2021-01-27">27th January 2021:</time> The role event schedule has reverted back to the previous schedule now that Naturalist week is over. Thanks to <a href="https://twitter.com/ItsColourTV/status/1354408853862035463">@ItsColourTV</a> for flagging!</li>
+          <li><time datetime="2021-01-21">21st January 2021:</time> The role event schedule has been updated to reflect changes relating to the <a href="https://www.rockstargames.com/newswire/article/61900/bonuses-for-moonshiners-and-naturalists-in-red-dead-online">Naturalist event bonuses this week</a>. I've pieced together the new schedule based on user-generated times submitted via the Google Docs form over the last couple of days - thanks to everyone who contributed!</li>
+          <li><time datetime="2020-12-06">9th December 2020:</time> Schedules have been updated, if you spot an error please submit a correction via the Google Docs form.</li>
+          <li><time datetime="2020-12-03">3rd December 2020:</time> All times across both event timetables are incorrect since the recent game update. Adam is working on piecing together the new schedules. Please be patient, and let us know what event times you've spotted in the wild via the Google Docs form.</li>
+          <li><time datetime="2020-09-28">28th September 2020:</time> Updated <a href="#role1">Role Event #1</a> and <a href="#role16">Role Event #16</a>.</li>
+          <li><time datetime="2020-09-27">27th September 2020:</time> Updated Legendary Animal Protection events in the role event schedule.</li>
+          <li><time datetime="2020-09-02">2nd September 2020:</time> Free-roam event list has been updated.</li>
+          <li><time datetime="2020-12-03">3rd December 2020:</time> All times across both event timetables are incorrect since the recent game update. Adam is working on piecing together the new schedules. Please be patient, and let us know what event times you've spotted in the wild via the Google Docs form.</li>
+          <li><time datetime="2020-09-02">2nd September 2020:</time> Free-roam event list has been updated.</li>
+          <li><time datetime="2020-08-27">27th August 2020:</time> Sounds like the schedule changed again shortly after my last update. We're working on it. Sorry folks!</li>
+          <li><time datetime="2020-08-24">24th August 2020:</time> Updated free-roam event schedule, once again thanks to <a href="https://www.reddit.com/r/RedDeadOnline/comments/i0n492/new_free_roam_events_schedule/g2o3j4f/">u/outerhaven84</a>.</li>
+          <li><time datetime="2020-08-23">23rd August 2020:</time> Updated <a href="#role1">Role Event #1</a> as it appears to be Day of Reckoning.</li>
+          <li><time datetime="2020-08-21">21st August 2020:</time> I've updated the Role Event schedule, thanks to <a href="https://www.reddit.com/r/RedDeadOnline/comments/i0n492/new_free_roam_events_schedule/g2bal5c/">u/outerhaven84</a>.</li>
+          <li><time datetime="2020-08-19">19th August 2020:</time> There's been another update and the timetable is inaccurate again. If you find a complete list posted with the new times, please <a href="https://github.com/richardwestenra/rdr2-free-roam-event-schedule">let</a> <a href="mailto:richard@richardwestenra.com">me</a> <a href="https://twitter.com/richardwestenra">know</a>.</li>
+          <li><time datetime="2020-08-02">2nd August 2020:</time> I've updated the role event timetable to include the new events from the Naturalist update (thanks to <a href="https://www.reddit.com/r/RedDeadOnline/comments/i0n492/new_free_roam_events_schedule/">Trinerity</a>).</li>
+        </ul>
+      </section>
+    -->
+      <noscript>
+        <p class="warning browsehappy">Please enable JavaScript to view the timetable</p>
+      </noscript>
+      <section class="schedule-wrapper">
+        <section>
+          <h2>유랑모드이벤트 스케쥴</h2>
+          <div id="free-roam-schedule" class="schedule"></div>
+          <p><strong>*</strong> 도전 이벤트에는 말타고 죽이기,헤드샷으로 죽이기,장총으로 죽이기,야생 동물 사냥 또는 낚시가 포함됩니다.</small></p>
+        </section>
+        
+        <section>
+          <h2>직업유랑모드이벤트 스케쥴</h2>
+          <div id="role-schedule" class="schedule"></div>
+        </section>
+      </section>
+      <!--
+      <p>Thank you to Patreon Pardners <b>Ian Richard Markham</b> and <b>WANTED1899</b> for their support! 🤠</p>
+      <p>Built with ♥ for the RDR2 community by <a href="http://richardwestenra.com">Richard Westenra</a>. Spotted any inaccurate data or bugs? <a href="https://github.com/richardwestenra/rdr2-free-roam-event-schedule">Submit an issue/PR on GitHub</a>, <a href="https://www.reddit.com/r/RedDeadOnline/comments/cjrf6a/i_made_a_freeroam_event_schedule_that_adjusts_to/">leave a comment on Reddit</a>, <a href="mailto:richard@richardwestenra.com">email me</a>, or <a href="https://twitter.com/richardwestenra">tweet at me</a>.</p>
+      <p><small><strong>Event data source:</strong> <a href="https://api.rdo.gg/">The RDO.GG API</a>. <a href="https://thenounproject.com/term/contrast/765915">Contrast icon by Tawny Whatmore</a> from the <a href="https://thenounproject.com/">Noun Project</a></small></p>
+    -->
+    </main>
+    <script>
+      // Base times are in UTC/GMT
+      window.rdoEvents = {
+        freeRoam: [
+          ['00:00','랜덤'],
+          ['00:45','야생동물 사진가'],
+          ['01:30','킹 오브 더 캐슬'],
+          ['02:15','낚시 도전'],
+          ['03:00','배달의 기수'],
+          ['03:45','랜덤'],
+          ['04:30','야생동물 사진가'],
+          ['05:15','철도왕'],
+          ['06:00','활쏘기 달인'],
+          ['06:45','야생동물 사진가'],
+          ['07:30','낚시 도전'],
+          ['08:15','킹 오브 더 캐슬'],
+          ['09:00','목숨을 건 사수'],
+          ['09:45','철도왕'],
+          ['10:30','야생 동물 사냥 도전'],
+          ['11:15','풀즈 골드'],
+          ['12:00','랜덤'],
+          ['12:45','야생동물 사진가'],
+          ['13:30','킹 오브 더 캐슬'],
+          ['14:15','낚시 도전'],
+          ['15:00','배달의 기수'],
+          ['15:45','랜덤'],
+          ['16:30','야생동물 사진가'],
+          ['17:15','철도왕'],
+          ['18:00','활쏘기 달인'],
+          ['18:45','야생동물 사진가'],
+          ['19:30','낚시 도전'],
+          ['20:15','킹 오브 더 캐슬'],
+          ['21:00','목숨을 건 사수'],
+          ['21:45','철도왕'],
+          ['22:30','야생 동물 사냥 도전'],
+          ['23:15','풀즈 골드']
+        ],
+        role: [
+          ['00:22','심판의 날'],
+          ['01:52','야생 동물 태그'],
+          ['03:22','일망타진'],
+          ['04:52','보급로'],
+          ['06:22','콘도르 알'],
+          ['07:52','심판의 날'],
+          ['09:22','전설의 동물 보호'],
+          ['10:52','심판의 날'],
+          ['12:22','야생 동물 태그'],
+          ['13:52','일망타진'],
+          ['15:22','보급로'],
+          ['16:52','콘도르 알'],
+          ['18:22','심판의 날'],
+          ['19:52','전설의 동물 보호'],
+          ['21:22','일망타진'],
+          ['22:52','잔해 수색']
+        ]
+      };
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
